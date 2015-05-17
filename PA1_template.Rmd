@@ -13,12 +13,12 @@ library(ggplot2) # we shall use ggplot2 for plotting figures
 ```
 
 ## Loading and preprocessing the data
-1. Load the data (i.e. read.csv())
+1.Load the data (i.e. read.csv())
 ```{r}
 rdata <- read.csv("C:/Users/6217473/Desktop/Coursera/data/activity.csv", sep=",", 
                   header = TRUE, colClasses=c("numeric", "character", "numeric"))
 ```
-2. Process/transform the data (if necessary) into a format suitable for your analysis
+2.Process/transform the data (if necessary) into a format suitable for your analysis
 ```{r}
 rdata$date <- as.Date(rdata$date, format = "%Y-%m-%d")
 rdata$interval <- as.factor(rdata$interval)
